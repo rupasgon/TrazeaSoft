@@ -1,5 +1,10 @@
+com\rupasgon\trazeasoft\controller\ItemManagerMenuController.class
 com\rupasgon\trazeasoft\controller\MainController.class
-com\rupasgon\trazeasoft\view\ItemManagerMenu.class
-com\rupasgon\trazeasoft\view\MainMenu.class
 com\rupasgon\trazeasoft\TrazeaSoft.class
-com\rupasgon\trazeasoft\view\OrderManagerMenu.class
+com\rupasgon\trazeasoft\dao\ItemDaoImpl.class
+com\rupasgon\trazeasoft\view\ItemManagerMenuView.class
+com\rupasgon\trazeasoft\dao\ItemDao.class
+com\rupasgon\trazeasoft\view\MainMenuView.class
+com\rupasgon\trazeasoft\connections\SqlConnection.class
+com\rupasgon\trazeasoft\model\Item.class
+com\rupasgon\trazeasoft\view\OrderManagerMenuView.class

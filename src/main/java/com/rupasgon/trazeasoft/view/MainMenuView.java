@@ -6,9 +6,8 @@ import java.awt.Toolkit;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-public class MainMenu extends JFrame{
-    private ItemManagerMenu itemManagerMenu;
-    private OrderManagerMenu orderManagerMenu;
+public class MainMenuView extends JFrame{
+
     private JButton btoOrderManagerMenu;
     private JButton btoItemManagerMenu;
     private JButton btoExit;
@@ -17,9 +16,8 @@ public class MainMenu extends JFrame{
     private int sizeWidth;
     private int sizeHeight;
 
-    public MainMenu() {
-        this.itemManagerMenu = new ItemManagerMenu();
-        this.orderManagerMenu = new OrderManagerMenu();
+    public MainMenuView() {
+
         this.btoOrderManagerMenu = new JButton("Order Manager Menu");
         this.btoItemManagerMenu = new JButton("Item Manager Menu");
         this.btoExit = new JButton("Exit");
@@ -32,7 +30,7 @@ public class MainMenu extends JFrame{
     public void initComponents(){
         
         this.setLayout(new GridLayout(0, 1));
-        setMainMenuBounds();
+        setViewBounds();
         this.setTitle("TrazeaSoft - Main Menu");
         this.add(this.btoOrderManagerMenu);
         this.add(this.btoItemManagerMenu);
@@ -43,7 +41,7 @@ public class MainMenu extends JFrame{
         
     }
     
-    public void setMainMenuBounds(){
+    public void setViewBounds(){
         
         Toolkit myScreen = Toolkit.getDefaultToolkit();
         Dimension sizeScreen= myScreen.getScreenSize();
@@ -51,21 +49,11 @@ public class MainMenu extends JFrame{
         this.setSize((sizeScreen.width/2),sizeScreen.height/2);
         this.setLocation(sizeScreen.width/4,sizeScreen.height/4);
     }
-
-    public ItemManagerMenu getItemManagerMenu() {
-        return itemManagerMenu;
-    }
-
-    public void setItemManagerMenu(ItemManagerMenu itemManagerMenu) {
-        this.itemManagerMenu = itemManagerMenu;
-    }
-
-    public OrderManagerMenu getOrderManagerMenu() {
-        return orderManagerMenu;
-    }
-
-    public void setOrderManagerMenu(OrderManagerMenu orderManagerMenu) {
-        this.orderManagerMenu = orderManagerMenu;
+    
+        public void setViewBounds(int positionX,int positionY,int sizeWidth,int sizeHeight){
+        
+        this.setLocation(positionX, positionY);
+        this.setSize(sizeWidth, sizeHeight);
     }
 
     public int getPositionX() {
